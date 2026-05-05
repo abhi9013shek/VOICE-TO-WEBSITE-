@@ -132,17 +132,24 @@ export default function ShaderShowcase() {
                     </motion.svg>
 
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                        {[...Array(6)].map((_, i) => (
+                        {[
+                            { left: 35, top: 45, x: 5 },
+                            { left: 65, top: 25, x: -8 },
+                            { left: 25, top: 75, x: 12 },
+                            { left: 55, top: 65, x: -3 },
+                            { left: 45, top: 35, x: 8 },
+                            { left: 75, top: 55, x: -10 },
+                        ].map((val, i) => (
                             <motion.div
                                 key={i}
                                 className="absolute w-1 h-1 bg-white/60 rounded-full"
                                 style={{
-                                    left: `${20 + Math.random() * 60}%`,
-                                    top: `${20 + Math.random() * 60}%`,
+                                    left: `${val.left}%`,
+                                    top: `${val.top}%`,
                                 }}
                                 animate={{
                                     y: [-10, -20, -10],
-                                    x: [0, Math.random() * 20 - 10, 0],
+                                    x: [0, val.x, 0],
                                     opacity: [0, 1, 0],
                                     scale: [0, 1, 0],
                                 }}
