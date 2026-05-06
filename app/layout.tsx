@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NeuralCore X1 — The Future of AI Commerce | Zoodeo",
+  title: "VOIWEB",
   description:
     "NeuralCore X1 powers Zoodeo's AI commerce engine. 256 billion parameters, real-time recommendations, and superhuman scale. Power your next breakthrough.",
 };
