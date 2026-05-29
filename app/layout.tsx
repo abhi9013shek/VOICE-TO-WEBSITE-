@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import GlobalBackground from "@/components/ui/global-background";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,9 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VOIWEB",
-  description:
-    "NeuralCore X1 powers Zoodeo's AI commerce engine. 256 billion parameters, real-time recommendations, and superhuman scale. Power your next breakthrough.",
+  title: "VOIWEB"
 };
 
 export default function RootLayout({
@@ -28,7 +27,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="bg-[#0a0f1e] overflow-x-hidden">{children}</body>
+      <body className="overflow-x-hidden">
+        <GlobalBackground />
+        {children}
+      </body>
     </html>
   );
 }

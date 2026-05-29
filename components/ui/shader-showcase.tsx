@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useRef, useState } from "react"
-import { MeshGradient, PulsingBorder } from "@paper-design/shaders-react"
+import { PulsingBorder } from "@paper-design/shaders-react"
 import { motion } from "framer-motion"
 import { html } from "framer-motion/client"
 
@@ -27,7 +27,7 @@ export default function ShaderShowcase() {
     }, [])
 
     return (
-        <div ref={containerRef} className="min-h-screen bg-black relative overflow-hidden">
+        <div ref={containerRef} className="min-h-screen relative overflow-hidden">
             <svg className="absolute inset-0 w-0 h-0">
                 <defs>
                     <filter id="glass-effect" x="-50%" y="-50%" width="200%" height="200%">
@@ -80,19 +80,7 @@ export default function ShaderShowcase() {
                 </defs>
             </svg>
 
-            <MeshGradient
-                className="absolute inset-0 w-full h-full"
-                colors={["#000000", "#06b6d4", "#0891b2", "#164e63", "#f97316"]}
-                speed={0.3}
-            />
-            <MeshGradient
 
-                className="absolute inset-0 w-full h-full opacity-60"
-                colors={["#000000", "#ffffff", "#06b6d4", "#f97316"]}
-                speed={0.2}
-                wire-frame="true"
-                background-Color="transparent"
-            />
 
             <header className="relative z-20 flex items-center justify-between p-6">
                 <motion.div
@@ -252,8 +240,8 @@ export default function ShaderShowcase() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.8 }}
                     >
-                        Create stunning visual experiences with our advanced shader technology. Interactive lighting, smooth
-                        animations, and beautiful effects that respond to your every move.
+                        Create stunning visual experiences with our advanced shader technology.<br />"12 crore shops. Zero websites. Because nobody built a tool simple enough. Until now — just speak and go live."
+
                     </motion.p>
 
                     <motion.div
